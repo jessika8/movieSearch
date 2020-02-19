@@ -1,0 +1,8 @@
+npm i node-fetch
+npm i express
+npm i express-handlebars
+npm i path
+npm i dotenv
+npm i request  (using fetch now)
+
+npm i -g nodemon (type nodemon in terminal)

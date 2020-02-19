@@ -1,0 +1,14 @@
+body {
+    background-color:rgb(206, 223, 245)
+}
+
+.wholeBody {
+    text-align: center;
+    border: solid;
+    border-block-color: rgb(1, 1, 110);
+    background-color: rgb(176, 209, 247);
+    height: 90vh;
+    width: 40vw;;
+    padding-bottom: 4vh;
+    padding-top: 1vh;
+}
