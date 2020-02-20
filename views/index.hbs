@@ -1,4 +1,42 @@
+
 <div class="wholeBody">
+<h1>Search a movie</h1>
+<form action="/" method="POST">
+<label for="movieName">Movie name: </label>
+<input type="text" name="movieName">
+<br>
+
+<label for="movieDirector">Director name: </label>
+<input type="text" name="movieDirector">
+<br>
+<input type="submit" name="Send">
+</form>
+
+{{#if err}}
+<h3>{{err}}</h3>
+{{else}}
+
+{{!-- data{
+    obj1 {
+        datas: 'cde'
+    },
+    obj2 {
+        datas: 'cde'
+    }
+} --}}
+
+<ul>
+    {{#each data}}
+    {{#each this}}
+
+    <li>{{@key}} : {{this}}</li>
+    {{/each}}
+</ul>
+<img src="{{poster}}" alt="">
+{{/if}}
+
+</div>
+{{!-- <div class="wholeBody">
 <h1>Movies</h1>
 
 <p>Name: {{title}}</p>
@@ -10,4 +48,4 @@
 <p>IMBD Raiting: {{imbdRaiting}}</p>
 <img src="{{poster}}" alt="">
 
-</div>
+</div> --}}

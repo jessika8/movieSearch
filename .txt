@@ -4,5 +4,9 @@ npm i express-handlebars
 npm i path
 npm i dotenv
 npm i request  (using fetch now)
+npm i body-parser
 
 npm i -g nodemon (type nodemon in terminal)
+
+
+https://developers.themoviedb.org/3/search/search-people

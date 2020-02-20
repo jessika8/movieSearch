@@ -1,9 +1,12 @@
 body {
-    background-color:rgb(206, 223, 245)
+    background-color:rgb(206, 223, 245);
+    text-align: center;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .wholeBody {
-    text-align: center;
+    display: inline-block;
     border: solid;
     border-block-color: rgb(1, 1, 110);
     background-color: rgb(176, 209, 247);
@@ -11,4 +14,12 @@ body {
     width: 40vw;;
     padding-bottom: 4vh;
     padding-top: 1vh;
+}
+img {
+height: 50vh;
+width: auto;
+}
+
+ul {
+    list-style: none;
 }
