@@ -1,9 +1,9 @@
 
-<div class="wholeBody">
-<h1>Search a movie</h1>
-<form action="/" method="POST">
-<label for="movieName">Movie name: </label>
-<input type="text" name="movieName">
+<div class="f">
+<h1>Search a person</h1>
+<form action="/peopleFetch" method="POST">
+<label for="person">Person name: </label>
+<input type="text" name="person">
 <br>
 
 {{!-- <label for="movieDirector">Director name: </label>
@@ -27,12 +27,12 @@
 
 <ul>
     {{#each data}}
-    {{!-- {{#each this}} --}}
+    {{#each this}}
 
     <li>{{@key}} : {{this}}</li>
     {{/each}}
 </ul>
-<img src="{{poster}}" alt="">
+<img src="{{moviePoster}}" alt="">
 {{/if}}
 
 </div>
