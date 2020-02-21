@@ -26,16 +26,18 @@ router.post('/', async(req, res) => {
     if (data.Response !== "False") {
 
         let title = data.Title  //in the documendation it is capitalised
-            let year = data.Year
+            // let year = data.Year
             let director = data.Director
             let actors = data.Actors
             let awards = data.Awards
             let poster = data.Poster
             let imbdRaiting = data.imdbRating
             let genre = data.Genre
+            let plot = data.Plot
+            let released = data.Released
             console.log(data)
 
-            res.render('index', {data:{Title: title, Year: year, Director: director, Actors: actors, Awards: awards, IMBD: imbdRaiting, Genre: genre}, poster})
+            res.render('index', {data:{Title: title, Released: released, Director: director, Actors: actors, Awards: awards, IMBD: imbdRaiting, Genre: genre, Plot: plot}, poster})
     } else {
         res.render('index', {err: "Try agan! Something went wrong!"})
     }
@@ -55,7 +57,7 @@ router.post('/peopleFetch', async (req, res) => {
     let overview = data.results[0].know_for[0].overview
     let knownForDep = data.results[0].known_for_department
 
-    res.render('peopleFetch', {data:{Known: knownForDep, Title: title, Release: releaseDate, Overview: overview}, moviePoster, name})
+    res.render('peopleFetch', {data:{Name: name, Known: knownForDep, Title: title, Release: releaseDate, Overview: overview}, moviePoster})
 })
 
 
