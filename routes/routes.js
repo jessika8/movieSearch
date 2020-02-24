@@ -1,5 +1,6 @@
  const {Router} = require('express');
  const router = Router();  //set up Router
+ const bringObj = require('../lib/createObj')
 
 const fetchMovie = require('../lib/fetchMovie');
 const fetchPeople = require('../lib/fetchPeople');
@@ -9,11 +10,9 @@ router.get('/', async (req, res) => {
     res.render('index');
 })
 
-//### removed extra bracket after router.get('/peopleFetch'), . . . ###
-//                                                         ^
 router.get('/peopleFetch', (req, res) => {
     res.render('peopleFetch')  //rendering fechPeople.hbs
-})// ### added bracket ###
+})
 
 
  // took iot from index.js
@@ -37,6 +36,7 @@ router.post('/', async(req, res) => {
             let genre = data.Genre
             let plot = data.Plot
             let released = data.Released
+            
             console.log(data)
 
             res.render('index', {data:{Title: title, Released: released, Director: director, Actors: actors, Awards: awards, IMBD: imbdRaiting, Genre: genre, Plot: plot}, poster})
@@ -48,18 +48,35 @@ router.post('/', async(req, res) => {
 
 router.post('/peopleFetch', async (req, res) => {
     let person = req.body.person;
-    console.log(person)
+    // console.log(person)
     let data = await fetchPeople(person)
-    console.log(data)
+    //console.log(data.results[0].known_for[0])
+    let objectObj = bringObj(data.results)
+    // console.log(JSON.stringify(objectObj))
+  
+    
+    // console.log(JSON.stringify(objectObj));
+   
 
-    let name = data.results[0].name
-    let moviePoster = `http://image.tmdb.org/t/p/w185/${data.results[0].known_for[0].poster_path}`; // ### create full image path ###
-    let title = data.results[0].known_for[0].title
-    let releaseDate = data.results[0].known_for[0].release_date// changed 'know_for' to 'known_for'
-    let overview = data.results[0].known_for[0].overview
-    let knownForDep = data.results[0].known_for_department
 
-    res.render('peopleFetch', {data:{Name: name, Known: knownForDep, Title: title, Release: releaseDate, Overview: overview}, moviePoster})
+    // let name = data.results[0].name
+    // let moviePoster = `http://image.tmdb.org/t/p/w185/${data.results[0].known_for[0].poster_path}`; // ### create full image path ###
+    // let title = data.results[0].known_for[0].title
+    // let title = [] 
+    // for (let i = 0; i < data.results[0].known_for.length; i++) {
+    //     title.push(data.results[0].known_for[i].title)
+    // }
+    // let releaseDate = data.results[0].known_for[0].release_date// changed 'know_for' to 'known_for'
+    // let releaseDate = []
+    // for (let i = 0; i < data.results[0].known_for.length; i++) {
+        
+    //     releaseDate.push(data.results[0].known_for[i].release_date)
+    // }
+    // let overview = data.results[0].known_for[0].overview
+    // let knownForDep = data.results[0].known_for_department
+
+    res.render('peopleFetch', {objectObj}) // {data:{Name: name, Known: knownForDep, Title: title, Release: releaseDate, Overview: overview}, moviePoster}
+    // res.render('index', {data:{Title: title, Released: released, Director: director, Actors: actors, Awards: awards, IMBD: imbdRaiting, Genre: genre, Plot: plot}, poster})
 })
 
 module.exports = router;

@@ -1,27 +1,48 @@
 <div class="f">
     <h1>Search a person</h1>
     <form action="/peopleFetch" method="POST">
-    <label for="person">Person name: </label>
-    <input type="text" name="person">
-    <br>
+        <label for="person">Person name: </label>
+        <input type="text" name="person">
+        <br>
 
-    <input type="submit" name="Send">
+        <input type="submit" name="Send">
     </form>
 
     {{#if err}}
-        <h3>{{err}}</h3>
+    <h3>{{err}}</h3>
     {{else}}
-        <ul>
-            {{#each data}}
-                <li>{{@key}} : {{this}}</li>
-            {{/each}} {{!-- ### removed redundant {{each}} ### --}}
-        </ul>
-        <img src="{{moviePoster}}" alt="">
+
+    <ul>
+        <h1>results</h1>
+         {{#each objectObj}} {{!-- array --}}
+                {{#each this}} {{!-- person object --}}
+                    {{#if @last}} {{!-- last = known_for array --}}
+                        {{#each this}} {{!-- film array --}}
+                            {{#each this}} {{!-- film object --}}
+                                {{#if @last}}
+                                 <img src="{{this}}" alt=""> 
+                                 {{else}}
+                                <li>{{@key}} : {{this}}</li> {{!-- film values --}}
+                                {{/if}}
+                            {{/each}} 
+                        {{/each}}
+                    {{else}}
+                        <li>{{this}} </li> {{!-- not known_for array, person values --}}
+                    {{/if}}
+                {{/each}}
+            {{/each}}
+    </ul>
     {{/if}}
 </div>
 
-
-    {{!-- data{
+{{!-- {{#if @last}}
+                    {{#each this}}
+                    <li>{{@key}} : {{this}}</li>
+                    {{/each}} 
+                {{else}}
+                    <li>{{@key}} : {{this}}</li>
+                {{/if}} --}}
+{{!-- data{
         obj1 {
             datas: 'cde'
         },

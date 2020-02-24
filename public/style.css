@@ -23,3 +23,7 @@ width: auto;
 ul {
     list-style: none;
 }
+.navUl {
+    display: flex;
+    justify-content: space-evenly;
+}
