@@ -27,3 +27,19 @@ ul {
     display: flex;
     justify-content: space-evenly;
 }
+.personDiv {
+    border: solid;
+    width: 40vw;
+}
+/* .li .personValues {
+background-color: blue;
+border: solid;
+} */
+
+.personValues {
+    background-color: blue;
+}
+.filmValues {
+    display: flex;
+    border: solid;
+}
