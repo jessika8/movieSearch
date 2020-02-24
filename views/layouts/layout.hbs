@@ -8,6 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-     {{{body}}}
+        {{!-- partials need > to pull it trough, nav bar will be rended on all pages --}}
+    {{> navbar}}
+
+    {{!-- '{{' double bracket - bringing something in from somewhere else}} --}}
+
+    {{!-- syntax for rendering, triple brackets, we use it for body, only tome when we are using 3 brackets, this will be rended on every single page --}}
+    {{{body}}}
 </body>
 </html>
