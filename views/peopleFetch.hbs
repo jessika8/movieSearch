@@ -12,30 +12,41 @@
     <h3>{{err}}</h3>
     {{else}}
 
-    <ul class="personDiv">
+    {{!-- <div class="personDiv"> --}}
         <h1>Results</h1>
          {{#each objectObj}} {{!-- array --}}
                 {{#each this}} {{!-- person object --}}
                     {{#if @last}} {{!-- last = known_for array --}}
+                    <div class="filmValues">
+                         {{!-- <div class="filmDiv"> --}}
                         {{#each this}} {{!-- film array --}}
+                        <div class="something">
+
                             {{#each this}} {{!-- film object --}}
                                 {{#if @last}}
-                                 <img src="{{this}}" alt=""> 
+                                    <img src="{{this}}" alt=""> 
+                    
                                  {{else}}
-                                 <div class="filmValues">
-                                <li >{{@key}} : {{this}}</li> {{!-- film values --}}
-                                </div>
+                                 <div class="listD">
+                                    <li >{{@key}} : {{this}}</li> {{!-- film values --}}
+                                    </div>
                                 {{/if}}
                             {{/each}} 
+                                                    </div>
+
                         {{/each}}
+                        {{!-- </div> --}}
+                      </div>
+
                     {{else}}
-                    <div class="personValues">
-                        <li>{{@key}} : {{this}} </li> {{!-- not known_for array, person values --}}
+                        <div class="personValues">
+                            <li>{{@key}} : {{this}} </li> {{!-- not known_for array, person values --}}
                         </div>
+                    
                     {{/if}}
                 {{/each}}
             {{/each}}
-    </ul>
+    {{!-- </ul> --}}
     {{/if}}
 </div>
 

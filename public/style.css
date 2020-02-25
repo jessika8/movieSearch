@@ -12,13 +12,20 @@ body {
     background-color: rgb(176, 209, 247);
     height: 90vh;
     width: 40vw;;
-    padding-bottom: 4vh;
+    padding-bottom: 12vh;
     padding-top: 1vh;
 }
 img {
 height: 50vh;
 width: auto;
+background-color: blue;
 }
+.send {
+    width: 18vw;
+}
+
+
+
 
 ul {
     list-style: none;
@@ -27,19 +34,56 @@ ul {
     display: flex;
     justify-content: space-evenly;
 }
-.personDiv {
+/* .personDiv {
     border: solid;
     width: 40vw;
-}
-/* .li .personValues {
-background-color: blue;
-border: solid;
 } */
+
 
 .personValues {
     background-color: blue;
+    font-size: 4vh;
+    margin-bottom: 2vh;
 }
 .filmValues {
     display: flex;
+    width: 90vw;
+    flex-direction: row;
+    /* justify-content: center; */
     border: solid;
 }
+.somthing img {
+    width: 30vw;
+    height: auto;
+    
+}
+li {
+    list-style: none;
+
+}
+.filmDiv {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2vh;
+}
+.something {
+    border: solid;
+    margin-right: 2vh;
+    margin-left: 2vh;
+}
+
+.something li:nth-child(2) {
+color: rebeccapurple;
+}
+
+.listD {
+    margin-bottom: 2vh;
+}
+/* .listD > li:nth-child(2) {
+    font-size: 5vh;
+    background-color: red;
+    color: rebeccapurple;
+} */
+/* .listD li:first-child {
+    font-size: 3vh;
+} */
