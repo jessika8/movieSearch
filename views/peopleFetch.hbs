@@ -5,7 +5,7 @@
         <input type="text" name="person">
         <br>
 
-        <input type="submit" name="Send">
+        <input type="submit" name="Send" class="peopleButton">
     </form>
 
     {{#if err}}
@@ -13,7 +13,7 @@
     {{else}}
 
     {{!-- <div class="personDiv"> --}}
-        <h1>Results</h1>
+        {{!-- <h1>Results</h1> --}}
          {{#each objectObj}} {{!-- array --}}
                 {{#each this}} {{!-- person object --}}
                     {{#if @last}} {{!-- last = known_for array --}}

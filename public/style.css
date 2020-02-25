@@ -1,6 +1,7 @@
 body {
     background-color:rgb(206, 223, 245);
     text-align: center;
+    padding-right: 15vh;
     /* display: flex;
     justify-content: center; */
 }
@@ -24,33 +25,60 @@ background-color: blue;
     width: 18vw;
 }
 
+h1 {
+    font-size: 6vh;
+}
 
 
-
+a:hover {
+    background-color: rgb(166, 197, 255);
+}
 ul {
     list-style: none;
 }
 .navUl {
     display: flex;
     justify-content: space-evenly;
+    
 }
+a:visited {
+    color: black;
+}
+a:hover {
+    color: rgb(0, 110, 255);
+  }
 /* .personDiv {
     border: solid;
     width: 40vw;
 } */
 
 
-.personValues {
-    background-color: blue;
-    font-size: 4vh;
-    margin-bottom: 2vh;
+
+.peopleButton {
+    width: 15vw;
+    margin-top: 1vh;
+    
 }
+.personValues {
+    /* background-color: blue; */
+    font-size: 5vh;
+    /* margin-bottom: 1.5vh; */
+    margin-top: 3vh;
+    text-decoration: underline;
+}
+/* .personValues  li:nth-child(1){
+    margin-top: 2vh;
+} */
+
 .filmValues {
     display: flex;
     width: 90vw;
     flex-direction: row;
+    margin-top: 2.5vh;
+    margin-bottom: 9vh;
     /* justify-content: center; */
-    border: solid;
+        /* align-content: center;
+   justify-content: center; */
 }
 .somthing img {
     width: 30vw;
@@ -70,14 +98,37 @@ li {
     border: solid;
     margin-right: 2vh;
     margin-left: 2vh;
+    background-color: rgb(176, 209, 247);
 }
 
-.something li:nth-child(2) {
-color: rebeccapurple;
+.something  div:nth-child(3) {
+/* color: rebeccapurple; */
+width: 30vw;
+height: 29vh;
+font-size: 2vh;
+/* overflow: visible; */
 }
+.something  div:nth-child(1) {
+    font-size: 3vh;
+    margin-bottom: 0;
+    margin-top: 1vh;
+}
+/* .personValues li:nth-child(1) {
+    
+} */
 
 .listD {
     margin-bottom: 2vh;
+}
+
+.f {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 /* .listD > li:nth-child(2) {
     font-size: 5vh;
