@@ -20,7 +20,7 @@ img {
 height: 50vh;
 width: auto;
 }
-.ulImg
+
 .send {
     width: 19vw;
     margin-top: 1vh;
@@ -71,6 +71,7 @@ a:hover {
 .peopleButton {
     width: 19vw;
     margin-top: 1vh;
+    margin-bottom: 1vh;
     
 }
 .peopleName {
@@ -121,6 +122,8 @@ li {
 width: 30vw;
 height: 29vh;
 font-size: 2vh;
+margin-left: 1vh;
+margin-right: 1vh;
 /* overflow: visible; */
 }
 .something  div:nth-child(1) {
