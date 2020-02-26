@@ -24,6 +24,7 @@ width: auto;
 .send {
     width: 19vw;
     margin-top: 1vh;
+    background-color: rebeccapurple;
 }
 .movieName {
     height: 3vh;
@@ -72,6 +73,7 @@ a:hover {
     width: 19vw;
     margin-top: 1vh;
     margin-bottom: 1vh;
+    background-color: red;
     
 }
 .peopleName {
