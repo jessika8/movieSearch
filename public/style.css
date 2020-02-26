@@ -24,7 +24,7 @@ width: auto;
 .send {
     width: 19vw;
     margin-top: 1vh;
-    background-color: rebeccapurple;
+
 }
 .movieName {
     height: 3vh;
@@ -73,7 +73,6 @@ a:hover {
     width: 19vw;
     margin-top: 1vh;
     margin-bottom: 1vh;
-    background-color: red;
     
 }
 .peopleName {
@@ -208,6 +207,7 @@ margin-right: 1vh;
         margin-top: 2vh;
         margin-bottom: 1vh;
         font-size: 3vh;
+        margin-right: 3vh;
     }
 
     /* Search a PERSON */
@@ -237,6 +237,7 @@ margin-right: 1vh;
         flex-direction: column;
         margin-top: 2.5vh;
         margin-bottom: 4vh;
+        margin-right: 13vh;
        
     }
     .somthing img {
