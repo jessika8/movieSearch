@@ -77,6 +77,6 @@ app.set('view engine', '.hbs');
 //     res.render('index', {title, year, director, actors, awards, imbdRaiting, poster, genre});
 //  })
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('server listening on port 3000')
 })

@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "10.x"
+  },
   "directories": {
     "lib": "lib"
   },
@@ -16,13 +19,14 @@
   },
   "devDependencies": {},
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jessika8/movieSearch.git"
   },
-  "author": "",
+  "author": "Maarja Roots",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jessika8/movieSearch/issues"
