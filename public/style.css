@@ -9,7 +9,7 @@ body {
 .wholeBody {
     display: inline-block;
     border: solid;
-    border-block-color: rgb(1, 1, 110);
+    border-color: rgb(1, 1, 110);
     background-color: rgb(176, 209, 247);
     height: 90vh;
     width: 40vw;;
@@ -19,16 +19,32 @@ body {
 img {
 height: 50vh;
 width: auto;
-background-color: blue;
 }
+.ulImg
 .send {
-    width: 18vw;
+    width: 19vw;
+    margin-top: 1vh;
+}
+.movieName {
+    height: 3vh;
+    font-size: 2vh;
+}
+
+.wholeBody ul li:first-child {
+    font-size: 3vh;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 1vh;
 }
 
 h1 {
     font-size: 6vh;
+    color:rgb(1, 1, 110);;
 }
-
+.wholeBody ul li:nth-child(8) {
+    margin-left: 2vh;
+    margin-right: 4vh;
+}
 
 a:hover {
     background-color: rgb(166, 197, 255);
@@ -39,6 +55,7 @@ ul {
 .navUl {
     display: flex;
     justify-content: space-evenly;
+    font-size: 2vh;
     
 }
 a:visited {
@@ -47,28 +64,25 @@ a:visited {
 a:hover {
     color: rgb(0, 110, 255);
   }
-/* .personDiv {
-    border: solid;
-    width: 40vw;
-} */
 
 
+/* Search a person */
 
 .peopleButton {
-    width: 15vw;
+    width: 19vw;
     margin-top: 1vh;
     
 }
+.peopleName {
+    height: 3vh;
+    font-size: 2vh;
+}
 .personValues {
-    /* background-color: blue; */
     font-size: 5vh;
-    /* margin-bottom: 1.5vh; */
     margin-top: 3vh;
     text-decoration: underline;
 }
-/* .personValues  li:nth-child(1){
-    margin-top: 2vh;
-} */
+
 
 .filmValues {
     display: flex;
@@ -96,6 +110,7 @@ li {
 }
 .something {
     border: solid;
+    border-color: rgb(1, 1, 110);
     margin-right: 2vh;
     margin-left: 2vh;
     background-color: rgb(176, 209, 247);
@@ -113,9 +128,7 @@ font-size: 2vh;
     margin-bottom: 0;
     margin-top: 1vh;
 }
-/* .personValues li:nth-child(1) {
-    
-} */
+
 
 .listD {
     margin-bottom: 2vh;
@@ -130,11 +143,124 @@ font-size: 2vh;
     align-items: center;
     
 }
-/* .listD > li:nth-child(2) {
-    font-size: 5vh;
-    background-color: red;
-    color: rebeccapurple;
-} */
-/* .listD li:first-child {
-    font-size: 3vh;
-} */
+
+
+
+@media only screen and (max-width: 450px) {
+
+
+    body {
+        text-align: center;
+        padding-right: 1vh;
+    
+    }
+
+    /* Search MOVIE */
+    
+    .wholeBody {
+        display: inline-block;
+        height: 110vh;
+        width: 80vw;;
+        padding-bottom: 12vh;
+        padding-top: 1vh;
+        border-color: rgb(1, 1, 110);
+    }
+    img {
+    height: 50vh;
+    width: auto;
+    }
+    .send {
+        margin-top: 1vh;
+        width: 65vw;
+        border: solid;
+        height: 5vh;
+       border-width: 1px;
+       background-color: white;
+       border-radius: 15%;
+       border-color: rgb(1, 1, 110);
+    }
+    
+    h1 {
+        font-size: 5vh;
+    }
+    .wholeBody li {
+        font-size: 2.3vh;
+        margin-right: 2.5vh;
+        margin-left: -1vh;
+    }
+    .movieName {
+        height: 4vh;
+        font-size: 2vh;
+    }
+    .wholeBody ul li:first-child {
+        font-size: 3vh;
+        font-weight: bold;
+        text-decoration: underline;
+        margin-bottom: 1vh;
+    }
+
+    /* NAVBAR */
+    .navUl li {
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+        font-size: 3vh;
+    }
+
+    /* Search a PERSON */
+    .peopleButton {
+        margin-top: 1vh;
+        width: 65vw;
+        border: solid;
+        height: 5vh;
+       border-width: 1px;
+       background-color: white;
+       border-radius: 15%;
+       border-color: rgb(1, 1, 110);
+    }
+    .peopleName {
+        height: 4vh;
+        font-size: 2vh;
+    }
+    .something  div:nth-child(1) {
+        font-size: 2vh;
+        margin-bottom: 0;
+        margin-top: 1vh;
+    }
+
+    .filmValues {
+        display: flex;
+        width: 90vw;
+        flex-direction: column;
+        margin-top: 2.5vh;
+        margin-bottom: 4vh;
+       
+    }
+    .somthing img {
+        width: 43vw;
+        height: auto;
+        margin-top: 1vh;
+    }
+    .something {
+    
+        margin-bottom: 5%;
+        padding-bottom: 4vh;
+    }
+   
+    .something  div:nth-child(3) {
+        width: 80vw;
+        height: auto;
+        font-size: 2.5vh;
+        /* overflow: visible; */
+        
+        }
+    .something  div:nth-child(1){
+        font-size: 4vh;
+    }
+    .personValues {
+        font-size: 5vh;
+        margin-top: 3vh;
+        text-decoration: underline;
+    }
+
+  }
+ 

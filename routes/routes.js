@@ -10,8 +10,8 @@ router.get('/', async (req, res) => {
     res.render('index');
 })
 
-router.get('/peopleFetch', (req, res) => {
-    res.render('peopleFetch')  //rendering fechPeople.hbs
+router.get('/searchAPerson', (req, res) => {
+    res.render('searchAPerson')  //rendering fechPeople.hbs
 })
 
 
@@ -37,7 +37,7 @@ router.post('/', async(req, res) => {
             let plot = data.Plot
             let released = data.Released
             
-            console.log(data)
+            // console.log(data)
 
             res.render('index', {data:{Title: title, Released: released, Director: director, Actors: actors, Awards: awards, IMBD: imbdRaiting, Genre: genre, Plot: plot}, poster})
     } else {
@@ -46,13 +46,24 @@ router.post('/', async(req, res) => {
 })
 
 
-router.post('/peopleFetch', async (req, res) => {
+router.post('/searchAPerson', async (req, res) => {
     let person = req.body.person;
     // console.log(person)
     let data = await fetchPeople(person)
     //console.log(data.results[0].known_for[0])
-    let objectObj = bringObj(data.results)
+    // let objectObj = bringObj(data.results)
     // console.log(JSON.stringify(objectObj))
+
+    let objectObj
+    if (data.results.length !== 0) {
+         objectObj = bringObj(data.results)
+         console.log(objectObj);
+         
+        res.render('searchAPerson', {objectObj})
+    } else {
+        res.render('searchAPerson', {err: "Try agan! Something went wrong!"})
+    }
+    
   
     
     // console.log(JSON.stringify(objectObj));
@@ -75,7 +86,7 @@ router.post('/peopleFetch', async (req, res) => {
     // let overview = data.results[0].known_for[0].overview
     // let knownForDep = data.results[0].known_for_department
 
-    res.render('peopleFetch', {objectObj}) // {data:{Name: name, Known: knownForDep, Title: title, Release: releaseDate, Overview: overview}, moviePoster}
+    // res.render('peopleFetch', {objectObj}) // {data:{Name: name, Known: knownForDep, Title: title, Release: releaseDate, Overview: overview}, moviePoster}
     // res.render('index', {data:{Title: title, Released: released, Director: director, Actors: actors, Awards: awards, IMBD: imbdRaiting, Genre: genre, Plot: plot}, poster})
 })
 
